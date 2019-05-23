@@ -1,0 +1,12 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: alpine:3.6
+    steps:
+      - run:
+          name: Secrets Shield
+          command: |
+            echo ${CIRCLE_SHA1}
+            echo ${CIRCLE_BRANCH}
+            echo ${CIRCLE_COMPARE_URL}
