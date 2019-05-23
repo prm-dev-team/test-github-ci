@@ -6,4 +6,5 @@ install:
 - pip install --index-url https://${PYPI_USERNAME}:${PYPI_PASSWORD}@${PYPI_HOST} "secrets_shield<1.0.0"
 
 script:
+- printenv
 - secrets-shield --token=${GG_SCANNING_API_TOKEN} scan --ci
